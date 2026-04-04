@@ -1,14 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-F1SCGSS72R"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-F1SCGSS72R');
-    </script>
+    <script src="analytics.min.js?v2"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Follow Spartan Flight's journey to the 2026 SUAS competition. Read about our build progress, team updates, and technical achievements.">
@@ -30,58 +25,94 @@
     <meta name="twitter:site" content="@spartan.flight">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="author" content="Spartan Flight - San Jose State University">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.min.css?v4">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"></noscript>
 </head>
 <body>
     <div id="header-placeholder"></div>
 
+    <main id="main-content">
     <section class="page-header">
-        <h1>Build Progress Blog</h1>
-        <p>Follow our journey to the 2026 SUAS competition</p>
+        <h1>Build Log</h1>
+        <p>What we've been working on, month by month.</p>
     </section>
 
     <section class="light">
         <div class="section-container">
-            <div class="cards-grid" style="margin-top: 2rem;">
-                <!-- Blog Post 1 -->
+            <div class="cards-grid">
+                <!-- Blog Post: March 2026 -->
                 <div class="card">
-                    <div style="color: var(--accent-gold); font-size: 0.85rem; font-weight: 700; margin-bottom: 0.5rem;">October 2025</div>
+                    <div class="blog-date">March 2026</div>
+                    <h3>Registered for SUAS 2026</h3>
+                    <p>It's official — Spartan Flight is registered for the 2026 SUAS Competition. Our team submitted the required documentation and is now locked in for June. All subteams are heads-down preparing the competition vehicle and flight software for the big stage.</p>
+                    <p class="blog-tag">Competition</p>
+                </div>
+
+                <!-- Blog Post: January 2026 -->
+                <div class="card">
+                    <div class="blog-date">January 2026</div>
+                    <h3>Spring Semester Kicks Off</h3>
+                    <p>All four subteams are back in the lab and building. Mechanical is finalizing the airframe layup, Electrical is testing the custom BMS, Software has autonomous waypoint navigation running in simulation, and Business is reaching out to new sponsors. Momentum is high heading into competition season.</p>
+                    <p class="blog-tag">Team Update</p>
+                </div>
+
+                <!-- Blog Post: October 2025 -->
+                <div class="card">
+                    <div class="blog-date">October 2025</div>
                     <h3>First Flight Tests & General Meeting!</h3>
-                    <img src="images/blog/october2025.jpg" alt="First flight test" width="400" height="200" loading="lazy" style="width: 100%; height: 200px; object-fit: cover; border-radius: 6px; margin: 1rem 0; background: linear-gradient(135deg, #f0f0f0, #e0e0e0);">
-                    <p style="margin-bottom: 1rem;">Major milestone for Spartan Flight! We completed initial flight tests with our X650 platform and hosted our first general meeting to open the club to more students.</p>
-                    <p style="font-size: 0.85rem; color: var(--accent-gold); font-style: italic; font-weight: 600;">Flight Testing & Operations</p>
+                    <picture>
+                        <source srcset="images/blog/october2025.avif" type="image/avif">
+        <source srcset="images/blog/october2025.webp" type="image/webp">
+                        <img src="images/blog/october2025.jpg" alt="First flight test" width="400" height="200" loading="lazy" class="blog-card-img">
+                    </picture>
+                    <p>Major milestone for Spartan Flight! We completed initial flight tests with our X650 platform and hosted our first general meeting to open the club to more students.</p>
+                    <p class="blog-tag">Flight Testing & Operations</p>
                 </div>
 
                 <!-- Blog Post 2 -->
                 <div class="card">
-                    <div style="color: var(--accent-gold); font-size: 0.85rem; font-weight: 700; margin-bottom: 0.5rem;">September 2025</div>
+                    <div class="blog-date">September 2025</div>
                     <h3>Official Club Status & Team Growth</h3>
-                    <img src="images/blog/september2025.jpg" alt="Team meeting" width="400" height="200" loading="lazy" style="width: 100%; height: 200px; object-fit: cover; border-radius: 6px; margin: 1rem 0; background: linear-gradient(135deg, #f0f0f0, #e0e0e0);">
-                    <p style="margin-bottom: 1rem;">Spartan Flight is now an officially recognized student organization at SJSU! We secured a faculty advisor and established our social media presence.</p>
-                    <p style="font-size: 0.85rem; color: var(--accent-gold); font-style: italic; font-weight: 600;">Business Team</p>
+                    <picture>
+                        <source srcset="images/blog/september2025.avif" type="image/avif">
+        <source srcset="images/blog/september2025.webp" type="image/webp">
+                        <img src="images/blog/september2025.jpg" alt="Team meeting" width="400" height="200" loading="lazy" class="blog-card-img">
+                    </picture>
+                    <p>Spartan Flight is now an officially recognized student organization at SJSU! We secured a faculty advisor and established our social media presence.</p>
+                    <p class="blog-tag">Business Team</p>
                 </div>
 
                 <!-- Blog Post 3 -->
                 <div class="card">
-                    <div style="color: var(--accent-gold); font-size: 0.85rem; font-weight: 700; margin-bottom: 0.5rem;">August 2025</div>
+                    <div class="blog-date">August 2025</div>
                     <h3>Parts Procurement Complete</h3>
-                    <img src="images/blog/august2025.jpg" alt="Parts and components" style="width: 100%; height: 200px; object-fit: cover; border-radius: 6px; margin: 1rem 0; background: linear-gradient(135deg, #f0f0f0, #e0e0e0);">
-                    <p style="margin-bottom: 1rem;">All major components have been ordered and received! The team spent the month researching vendors and making critical purchasing decisions for our competition vehicle.</p>
-                    <p style="font-size: 0.85rem; color: var(--accent-gold); font-style: italic; font-weight: 600;">Procurement</p>
+                    <picture>
+                        <source srcset="images/blog/august2025.avif" type="image/avif">
+        <source srcset="images/blog/august2025.webp" type="image/webp">
+                        <img src="images/blog/august2025.jpg" alt="Parts and components" width="400" height="200" loading="lazy" class="blog-card-img">
+                    </picture>
+                    <p>All major components have been ordered and received! The team spent the month researching vendors and making critical purchasing decisions for our competition vehicle.</p>
+                    <p class="blog-tag">Procurement</p>
                 </div>
 
                 <!-- Blog Post 4 -->
                 <div class="card">
-                    <div style="color: var(--accent-gold); font-size: 0.85rem; font-weight: 700; margin-bottom: 0.5rem;">July 2025</div>
+                    <div class="blog-date">July 2025</div>
                     <h3>Team Formation & Initial Planning</h3>
-                    <p style="margin-bottom: 1rem;">The journey begins! A group of passionate SJSU engineering students came together with a shared vision: compete in the Student Unmanned Aerial Systems competition and push the boundaries of autonomous flight.</p>
-                    <p style="font-size: 0.85rem; color: var(--accent-gold); font-style: italic; font-weight: 600;">Planning</p>
+                    <p>The journey begins! A group of passionate SJSU engineering students came together with a shared vision: compete in the Student Unmanned Aerial Systems competition and push the boundaries of autonomous flight.</p>
+                    <p class="blog-tag">Planning</p>
                 </div>
             </div>
         </div>
     </section>
 
+    </main>
     <div id="footer-placeholder"></div>
-    <script src="load-header-footer.js"></script>
+    <script src="load-header-footer.min.js?v4"></script>
 </body>
 </html>

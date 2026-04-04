@@ -40,10 +40,11 @@
                 })
                 .catch(err => {
                     console.error('Error loading header:', err);
+                    headerPlaceholder.setAttribute('role', 'alert');
                     if (isLocalFile) {
-                        headerPlaceholder.innerHTML = '<div style="padding: 1rem; background: #fff3cd; border: 1px solid #ffc107; border-radius: 4px; margin: 1rem 0;"><p style="margin: 0; color: #856404;"><strong>Note:</strong> Header loading requires an HTTP server. For local development, run: <code>python -m http.server 8000</code> or <code>npx serve</code></p></div>';
+                        headerPlaceholder.innerHTML = '<div class="load-error load-error--warning"><p><strong>Note:</strong> Header loading requires an HTTP server. Run: <code>python -m http.server 8000</code></p></div>';
                     } else {
-                        headerPlaceholder.innerHTML = '<p style="padding: 1rem; color: red;">Error loading header. Please refresh the page.</p>';
+                        headerPlaceholder.innerHTML = '<div class="load-error"><p>Error loading header. Please refresh the page.</p></div>';
                     }
                 });
         }
@@ -61,10 +62,11 @@
                 })
                 .catch(err => {
                     console.error('Error loading footer:', err);
+                    footerPlaceholder.setAttribute('role', 'alert');
                     if (isLocalFile) {
-                        footerPlaceholder.innerHTML = '<div style="padding: 1rem; background: #fff3cd; border: 1px solid #ffc107; border-radius: 4px; margin: 1rem 0;"><p style="margin: 0; color: #856404;"><strong>Note:</strong> Footer loading requires an HTTP server. For local development, run: <code>python -m http.server 8000</code> or <code>npx serve</code></p></div>';
+                        footerPlaceholder.innerHTML = '<div class="load-error load-error--warning"><p><strong>Note:</strong> Footer loading requires an HTTP server. Run: <code>python -m http.server 8000</code></p></div>';
                     } else {
-                        footerPlaceholder.innerHTML = '<p style="padding: 1rem; color: red;">Error loading footer. Please refresh the page.</p>';
+                        footerPlaceholder.innerHTML = '<div class="load-error"><p>Error loading footer. Please refresh the page.</p></div>';
                     }
                 });
         }

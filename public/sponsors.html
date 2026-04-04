@@ -1,14 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-F1SCGSS72R"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-F1SCGSS72R');
-    </script>
+    <script src="analytics.min.js?v2"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Meet the sponsors supporting Spartan Flight's mission to build autonomous aerial systems and compete in the 2026 SUAS competition.">
@@ -30,7 +25,13 @@
     <meta name="twitter:site" content="@spartan.flight">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="author" content="Spartan Flight - San Jose State University">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.min.css?v4">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"></noscript>
     <style>
         .sponsor-showcase {
             padding: 4rem 2rem;
@@ -84,55 +85,53 @@
 <body>
     <div id="header-placeholder"></div>
 
+    <main id="main-content">
     <section class="page-header">
         <h1>Our Sponsors</h1>
-        <p>We're grateful to the companies and organizations that support our mission to build autonomous aerial systems and compete at the highest levels of collegiate unmanned aviation.</p>
+        <p>The companies and individuals making this project possible.</p>
     </section>
 
     <section class="sponsor-showcase">
         <div class="section-container">
             <div class="sponsor-cta">
-                <p style="font-size: 1.1rem; color: var(--text-light); margin-bottom: 1.5rem; max-width: 600px; margin-left: auto; margin-right: auto;">Interested in becoming a sponsor? Download our sponsorship packet to learn about opportunities and benefits.</p>
-                <a href="sponsorship.html" class="btn btn-primary" style="font-size: 1rem; padding: 1rem 2.5rem;">Download Sponsorship Packet</a>
+                <p style="font-size: 1.1rem; color: var(--text-light); margin-bottom: 1.5rem; max-width: 600px; margin-left: auto; margin-right: auto;">Want to join them? Check out what we offer sponsors and download our sponsorship packet.</p>
+                <a href="sponsorship.html" class="btn btn-primary" style="font-size: 1rem; padding: 1rem 2.5rem;">Become a Sponsor</a>
             </div>
-
-            <!-- Gold Tier Sponsors - Hidden if no sponsors -->
-            <!-- <div class="sponsor-tier">
-                <h2>Thank you to Our Gold Tier Sponsors</h2>
-                <div class="logos-grid">
-                    <a href="#" style="display: block;"><img src="images/sponsor_example.png" alt="Sponsor Name" loading="lazy" width="180" height="60"></a>
-                </div>
-            </div> -->
 
             <!-- Silver Tier Sponsors -->
             <div class="sponsor-tier">
-                <h2>Thank you to Our Silver Tier Sponsors</h2>
+                <h2>Silver Tier Sponsors</h2>
                 <div class="logos-grid">
-                    <a href="#" style="display: block;"><img src="images/sponsor-alif.png" alt="Alif" loading="lazy" width="180" height="60"></a>
+                    <div><img src="images/sponsor-alif.png" alt="Alif Semiconductor" loading="lazy" width="180" height="60"></div>
                 </div>
             </div>
 
-            <!-- Launch Tier Sponsors - Hidden if no sponsors -->
-            <!-- <div class="sponsor-tier">
-                <h2>Thank you to Our Launch Tier Sponsors</h2>
-                <div class="logos-grid">
-                    <a href="#" style="display: block;"><img src="images/sponsor_example.png" alt="Sponsor Name" loading="lazy" width="180" height="60"></a>
-                </div>
-            </div> -->
-
-            <!-- Community Partners - Currently has values -->
+            <!-- Community Partners -->
             <div class="sponsor-tier">
-                <h2>Thank you to Our Community Partners</h2>
+                <h2>Community Partners</h2>
                 <div class="logos-grid">
-                    <a href="#" style="display: block;"><img src="images/sponsors-collage.png" alt="Sponsors collage" loading="lazy" width="180" height="60"></a>
-                    <a href="#" style="display: block;"><img src="images/sponsor_astral.png" alt="Astral" loading="lazy" width="180" height="60"></a>
-                    <a href="#" style="display: block;"><img src="images/sponsor_stencilease.jpg" alt="Stencilease" loading="lazy" width="180" height="60"></a>
+                    <div><picture>
+                        <source srcset="images/sponsors-collage.avif" type="image/avif">
+                        <source srcset="images/sponsors-collage.webp" type="image/webp">
+                        <img src="images/sponsors-collage.png" alt="Community sponsor" loading="lazy" width="180" height="60">
+                    </picture></div>
+                    <div><picture>
+                        <source srcset="images/sponsor_astral.avif" type="image/avif">
+                        <source srcset="images/sponsor_astral.webp" type="image/webp">
+                        <img src="images/sponsor_astral.png" alt="Astral" loading="lazy" width="180" height="60">
+                    </picture></div>
+                    <div><picture>
+                        <source srcset="images/sponsor_stencilease.avif" type="image/avif">
+                        <source srcset="images/sponsor_stencilease.webp" type="image/webp">
+                        <img src="images/sponsor_stencilease.jpg" alt="Stencilease" loading="lazy" width="180" height="60">
+                    </picture></div>
                 </div>
             </div>
         </div>
     </section>
 
+    </main>
     <div id="footer-placeholder"></div>
-    <script src="load-header-footer.js"></script>
+    <script src="load-header-footer.min.js?v4"></script>
 </body>
 </html>

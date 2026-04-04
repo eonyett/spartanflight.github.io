@@ -1,14 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-F1SCGSS72R"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-F1SCGSS72R');
-    </script>
+    <script src="analytics.min.js?v2"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Meet the team behind Spartan Flight - dedicated engineering students from San Jose State University driving innovation in autonomous aerial systems.">
@@ -30,184 +25,36 @@
     <meta name="twitter:site" content="@spartan.flight">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="author" content="Spartan Flight - San Jose State University">
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Member-specific styles */
-        .members-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2.5rem;
-            margin-top: 3rem;
-        }
-
-        .member-card {
-            background: var(--white);
-            padding: 2.5rem 2rem;
-            border-radius: 6px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            transition: all 0.3s;
-            text-align: center;
-        }
-
-        .member-card:hover {
-            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-            transform: translateY(-4px);
-        }
-
-        .member-image {
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            margin: 0 auto 1.5rem;
-            background: linear-gradient(135deg, var(--primary-blue), var(--accent-gold));
-            border: 4px solid var(--accent-gold);
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-        }
-
-        .member-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .member-card h3 {
-            color: var(--primary-blue);
-            margin-bottom: 0.5rem;
-            font-size: 1.4rem;
-            font-weight: 800;
-        }
-
-        .member-role {
-            color: var(--accent-gold);
-            font-weight: 700;
-            margin-bottom: 1rem;
-            font-size: 0.95rem;
-        }
-
-        .member-link {
-            display: inline-block;
-            color: var(--primary-blue);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: color 0.3s;
-        }
-
-        .member-link:hover {
-            color: var(--accent-gold);
-        }
-
-        @media (max-width: 768px) {
-            .members-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-                margin-top: 2rem;
-            }
-
-            .member-card {
-                padding: 2rem 1.5rem;
-            }
-
-            .member-image {
-                width: 120px;
-                height: 120px;
-            }
-
-            .member-card h3 {
-                font-size: 1.25rem;
-            }
-
-            .member-role {
-                font-size: 0.9rem;
-            }
-
-            .section-intro {
-                text-align: center;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.min.css?v4">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"></noscript>
 </head>
 <body>
-    <header>
-        <div class="nav-container">
-            <a href="index.html" class="logo">
-                <img src="images/logo.jpg" alt="Spartan Flight Logo" width="50" height="50" loading="eager" fetchpriority="high">
-                <div>
-                    <div class="logo-text">SPARTAN <span class="logo-accent">FLIGHT</span></div>
-                    <div class="logo-subtitle">San Jose State University's<br>First Drone Competition Team</div>
-                </div>
-            </a>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="sponsors.html">Sponsors</a>
-                <a href="projects.html">Projects</a>
-                <a href="members.html">Members</a>
-                <a href="blog.html">Blog</a>
-                <a href="contact.html">Contact Us</a>
-            </nav>
-            <div class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-        <nav class="mobile-menu" id="mobileMenu">
-            <a href="index.html">Home</a>
-            <a href="sponsors.html">Sponsors</a>
-            <a href="projects.html">Projects</a>
-            <a href="members.html">Members</a>
-            <a href="blog.html">Blog</a>
-            <a href="contact.html">Contact Us</a>
-        </nav>
-    </header>
-    <script>
-        // Mobile menu toggle
-        (function() {
-            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-            const mobileMenu = document.getElementById('mobileMenu');
+    <div id="header-placeholder"></div>
 
-            if (mobileMenuToggle && mobileMenu) {
-                mobileMenuToggle.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    mobileMenuToggle.classList.toggle('active');
-                    mobileMenu.classList.toggle('active');
-                });
-
-                const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-                mobileMenuLinks.forEach(link => {
-                    link.addEventListener('click', function() {
-                        mobileMenuToggle.classList.remove('active');
-                        mobileMenu.classList.remove('active');
-                    });
-                });
-
-                document.addEventListener('click', function(event) {
-                    const isClickInside = mobileMenu.contains(event.target) || 
-                                         mobileMenuToggle.contains(event.target);
-                    if (!isClickInside && mobileMenu.classList.contains('active')) {
-                        mobileMenuToggle.classList.remove('active');
-                        mobileMenu.classList.remove('active');
-                    }
-                });
-            }
-        })();
-    </script>
-
+    <main id="main-content">
     <section class="page-header">
         <h1>Meet Our Team</h1>
-        <p>Dedicated students driving innovation in autonomous aerial systems at San José State University</p>
+        <p>The people building SJSU's competition drone — from airframe to flight software.</p>
     </section>
 
     <section class="light">
         <div class="section-container">
             <h2>Team Leadership</h2>
-            <p class="section-intro" style="margin-left: auto; margin-right: auto;">Our team is led by passionate engineering students committed to pushing the boundaries of UAS technology.</p>
+            <p class="section-intro">Four leads. Four disciplines. One vehicle.</p>
 
             <div class="members-grid">
                 <div class="member-card">
                     <div class="member-image">
-                        <img src="images/members/ben.jpg" alt="Ben Nguyen" width="140" height="140" loading="lazy">
+                        <picture>
+                            <source srcset="images/members/ben.avif" type="image/avif">
+        <source srcset="images/members/ben.webp" type="image/webp">
+                            <img src="images/members/ben.jpg" alt="Ben Nguyen" width="140" height="140" loading="lazy">
+                        </picture>
                     </div>
                     <h3>Ben Nguyen</h3>
                     <p class="member-role">Chief Engineer & Electrical Lead</p>
@@ -216,7 +63,11 @@
 
                 <div class="member-card">
                     <div class="member-image">
-                        <img src="images/members/andy.jpg" alt="Andy Van" width="140" height="140" loading="lazy">
+                        <picture>
+                            <source srcset="images/members/andy.avif" type="image/avif">
+        <source srcset="images/members/andy.webp" type="image/webp">
+                            <img src="images/members/andy.jpg" alt="Andy Van" width="140" height="140" loading="lazy">
+                        </picture>
                     </div>
                     <h3>Andy Van</h3>
                     <p class="member-role">Software Lead</p>
@@ -225,7 +76,11 @@
 
                 <div class="member-card">
                     <div class="member-image">
-                        <img src="images/members/justin.jpg" alt="Justin Wang" width="140" height="140" loading="lazy">
+                        <picture>
+                            <source srcset="images/members/justin.avif" type="image/avif">
+        <source srcset="images/members/justin.webp" type="image/webp">
+                            <img src="images/members/justin.jpg" alt="Justin Wang" width="140" height="140" loading="lazy">
+                        </picture>
                     </div>
                     <h3>Justin Wang</h3>
                     <p class="member-role">Mechanical Lead</p>
@@ -234,17 +89,23 @@
 
                 <div class="member-card">
                     <div class="member-image">
-                        <img src="images/members/ethan.jpg" alt="Ethan Onyett" width="140" height="140" loading="lazy">
+                        <picture>
+                            <source srcset="images/members/ethan.avif" type="image/avif">
+        <source srcset="images/members/ethan.webp" type="image/webp">
+                            <img src="images/members/ethan.jpg" alt="Ethan Onyett" width="140" height="140" loading="lazy">
+                        </picture>
                     </div>
                     <h3>Ethan Onyett</h3>
                     <p class="member-role">Business Lead</p>
-                    <a href="https://www.linkedin.com/in/ethanonyett/" target="_blank" class="member-link">LinkedIn →</a>
+                    <a href="https://www.linkedin.com/in/ethanonyett/" target="_blank" rel="noopener noreferrer" class="member-link">LinkedIn →</a>
+                    <a href="https://www.minutetactics.com" target="_blank" rel="noopener noreferrer" class="member-link">MinuteTactics →</a>
                 </div>
             </div>
         </div>
     </section>
 
+    </main>
     <div id="footer-placeholder"></div>
-    <script src="load-header-footer.js"></script>
+    <script src="load-header-footer.min.js?v4"></script>
 </body>
 </html>

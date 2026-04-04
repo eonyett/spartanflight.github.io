@@ -1,324 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-F1SCGSS72R"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-F1SCGSS72R');
-    </script>
+    <script src="analytics.min.js?v2"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn how to sponsor Spartan Flight through corporate sponsorships, parts donations, or individual contributions. Support our UAS competition team.">
-    <title>Sponsor Us - Spartan Flight</title>
+    <meta name="description" content="Sponsor Spartan Flight — SJSU's autonomous drone competition team. Corporate sponsorships, parts donations, and tax-deductible individual contributions. Logo on aircraft, recruiting access to 20+ engineering students, monthly updates.">
+    <meta name="keywords" content="sponsor university drone team, corporate sponsorship engineering club, SJSU sponsorship, student UAS team sponsor, tax-deductible STEM donation, sponsor college robotics team, university club sponsorship opportunities">
+    <title>Sponsor Us - Spartan Flight | SJSU Drone Team Sponsorship</title>
     <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
     <meta name="theme-color" content="#003366">
     <link rel="canonical" href="https://spartanflightsjsu.com/sponsorship.html">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Sponsor Us - Spartan Flight">
-    <meta property="og:description" content="Learn how to sponsor Spartan Flight through corporate sponsorships, parts donations, or individual contributions. Support our UAS competition team.">
+    <meta property="og:title" content="Sponsor Us - Spartan Flight | SJSU Drone Team">
+    <meta property="og:description" content="Sponsor Spartan Flight — SJSU's autonomous drone competition team. Tax-deductible corporate sponsorships with recruiting access, brand visibility, and monthly updates.">
     <meta property="og:url" content="https://spartanflightsjsu.com/sponsorship.html">
     <meta property="og:image" content="https://spartanflightsjsu.com/images/sponsors-collage.png">
     <meta property="og:site_name" content="Spartan Flight">
     <meta property="og:locale" content="en_US">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Sponsor Us - Spartan Flight">
-    <meta name="twitter:description" content="Learn how to sponsor Spartan Flight through corporate sponsorships, parts donations, or individual contributions. Support our UAS competition team.">
+    <meta name="twitter:title" content="Sponsor Us - Spartan Flight | SJSU Drone Team">
+    <meta name="twitter:description" content="Sponsor Spartan Flight — SJSU's autonomous drone competition team. Tax-deductible corporate sponsorships with recruiting access, brand visibility, and monthly updates.">
     <meta name="twitter:image" content="https://spartanflightsjsu.com/images/sponsors-collage.png">
     <meta name="twitter:site" content="@spartan.flight">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="author" content="Spartan Flight - San Jose State University">
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        .sponsor-methods-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .sponsor-method-card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            border: 2px solid rgba(0, 51, 102, 0.1);
-            transition: all 0.3s;
-        }
-
-        .sponsor-method-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-            border-color: var(--accent-gold);
-        }
-
-        .sponsor-method-card h3 {
-            color: var(--primary-blue);
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            font-weight: 800;
-        }
-
-        .sponsor-method-card p {
-            color: var(--text-light);
-            line-height: 1.7;
-            margin-bottom: 1.5rem;
-        }
-
-        .sponsor-method-card .btn {
-            width: 100%;
-            text-align: center;
-            margin-top: auto;
-        }
-
-        .sponsor-method-card {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .pdf-section-wrapper {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 2rem;
-            margin-top: 3rem;
-            align-items: start;
-        }
-
-        @media (max-width: 768px) {
-            .pdf-section-wrapper {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .pdf-viewer-container {
-            width: 100%;
-            border-radius: 6px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-            background: var(--white);
-            min-height: 1200px;
-        }
-
-        .pdf-viewer-container iframe {
-            width: 100%;
-            height: 1200px;
-            border: none;
-            display: block;
-        }
-
-        .pdf-sidebar {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            border: 2px solid rgba(0, 51, 102, 0.1);
-        }
-
-        .pdf-sidebar h3 {
-            color: var(--primary-blue);
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            font-weight: 800;
-        }
-
-        .pdf-sidebar p {
-            color: var(--text-light);
-            line-height: 1.7;
-            margin-bottom: 1rem;
-        }
-
-        .pdf-sidebar a {
-            color: var(--primary-blue);
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s;
-        }
-
-        .pdf-sidebar a:hover {
-            color: var(--accent-gold);
-        }
-
-        .pdf-download-btn {
-            text-align: center;
-            margin-top: 2rem;
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .individual-donation-section {
-            background: linear-gradient(135deg, var(--primary-blue) 0%, #004d7a 100%);
-            color: var(--white);
-            padding: 4rem 2rem;
-            margin-top: 3rem;
-            position: relative;
-            left: 50%;
-            right: 50%;
-            margin-left: calc(-50vw + 2rem);
-            margin-right: calc(-50vw + 2rem);
-            width: calc(100vw - 4rem);
-            max-width: none;
-        }
-
-        .individual-donation-wrapper {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .individual-donation-section h2 {
-            color: var(--white);
-            text-align: center;
-            margin-bottom: 1rem;
-        }
-
-        .individual-donation-section .section-intro {
-            color: rgba(255, 255, 255, 0.95);
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto 2rem;
-            font-size: 1.1rem;
-        }
-
-        .individual-donation-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin-top: 3rem;
-            align-items: start;
-        }
-
-        .individual-donation-benefits {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 2rem;
-            border-radius: 12px;
-            border: 2px solid rgba(255, 184, 28, 0.3);
-        }
-
-        .individual-donation-benefits h3 {
-            color: var(--accent-gold);
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            font-weight: 800;
-        }
-
-        .individual-donation-benefits ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .individual-donation-benefits li {
-            color: rgba(255, 255, 255, 0.95);
-            line-height: 1.8;
-            margin-bottom: 1.25rem;
-            padding-left: 2rem;
-            position: relative;
-            font-size: 1rem;
-        }
-
-        .individual-donation-benefits li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--accent-gold);
-            font-weight: 900;
-            font-size: 1.3rem;
-        }
-
-        .individual-donation-content {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 12px;
-        }
-
-        .individual-donation-content h3 {
-            color: var(--primary-blue);
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-            font-weight: 800;
-        }
-
-        .individual-donation-content ol {
-            color: var(--text-light);
-            line-height: 1.8;
-            margin-left: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .individual-donation-content ol li {
-            margin-bottom: 0.75rem;
-        }
-
-        @media (max-width: 768px) {
-            .individual-donation-section {
-                margin-left: -2rem;
-                margin-right: -2rem;
-                width: 100vw;
-                padding: 3rem 1.5rem;
-            }
-
-            .individual-donation-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-            @media (max-width: 768px) {
-            .sponsor-methods-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .pdf-viewer-container {
-                min-height: 900px;
-            }
-
-            .pdf-viewer-container iframe {
-                height: 900px;
-            }
-
-            .pdf-download-btn {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .pdf-download-btn .btn {
-                width: 100%;
-                max-width: 300px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.min.css?v4">
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-readable site information">
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Sponsor Spartan Flight - SJSU Drone Team",
+      "description": "Sponsorship opportunities for Spartan Flight, SJSU's autonomous drone competition team. Corporate sponsorships, parts donations, and individual contributions — all tax-deductible.",
+      "url": "https://spartanflightsjsu.com/sponsorship.html",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Spartan Flight",
+        "url": "https://spartanflightsjsu.com"
+      },
+      "about": {
+        "@type": "Organization",
+        "name": "Spartan Flight",
+        "url": "https://spartanflightsjsu.com"
+      },
+      "significantLink": [
+        "https://spartanflightsjsu.com/sponsorship.html#corporate",
+        "https://spartanflightsjsu.com/sponsorship.html#individual",
+        "mailto:spartanflightsjsu@gmail.com"
+      ]
+    }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"></noscript>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"></noscript>
 </head>
 <body>
     <div id="header-placeholder"></div>
 
+    <main id="main-content">
     <section class="page-header">
-        <h1>Sponsor Us</h1>
-        <p>Support Spartan Flight through corporate sponsorships, parts donations, or individual contributions. Choose the method that works best for you.</p>
+        <h1>Sponsor Spartan Flight</h1>
+        <p>Corporate sponsorships, parts donations, or individual contributions — pick what works for you.</p>
+        <a href="#individual" class="hero-cta">Donate Now</a>
     </section>
 
     <section class="white">
         <div class="section-container">
-            <h2>Ways to Support Spartan Flight</h2>
-            <p class="section-intro">We offer multiple ways to support our mission. Select the option that best fits your needs.</p>
+            <h2>Ways to Support Us</h2>
+            <p class="section-intro">Three options. All tax-deductible through SJSU.</p>
             
             <div class="sponsor-methods-grid">
                 <div class="sponsor-method-card">
+                    <div class="card-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
                     <h3>Corporate Sponsorship</h3>
-                    <p>Partner with us through monetary sponsorship, parts donations, or collaboration opportunities. Perfect for businesses looking to support STEM education and gain brand visibility.</p>
-                    <a href="#corporate" class="btn btn-primary">Learn More</a>
+                    <p>Monetary support or collaboration. Your logo on our aircraft, gear, and website. Recruiting access to our engineering students.</p>
+                    <a href="#corporate" class="btn-card">Learn More</a>
                 </div>
                 <div class="sponsor-method-card">
+                    <div class="card-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
                     <h3>Parts & Equipment</h3>
-                    <p>Donate components, materials, or equipment that we need for our competition vehicle. In-kind donations help us reduce costs and accelerate development.</p>
-                    <a href="#corporate" class="btn btn-primary">Contact Us</a>
+                    <p>Donate components, materials, or tools we need for the build. In-kind donations reduce our costs and speed up development.</p>
+                    <a href="#corporate" class="btn-card">Contact Us</a>
                 </div>
                 <div class="sponsor-method-card">
+                    <div class="card-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
                     <h3>Individual Donations</h3>
-                    <p>Make a tax-deductible donation directly through SJSU's Give Now platform. Ideal for individual supporters and smaller contributions.</p>
-                    <a href="#individual" class="btn btn-primary">Donate Now</a>
+                    <p>Any amount helps. Donate through SJSU's Give Now platform — it's tax-deductible and goes directly to our team.</p>
+                    <a href="#individual" class="btn-card">Donate Now</a>
                 </div>
             </div>
 
@@ -328,14 +116,17 @@
                         <iframe id="pdfViewer" src="sponsorship-packet.pdf#view=FitH&page=1" type="application/pdf" title="Sponsorship Packet PDF"></iframe>
                     </div>
                     <div class="pdf-download-btn">
-                        <a href="sponsorship-packet.pdf" download class="btn btn-primary">Download PDF</a>
-                        <a href="sponsors.html" class="btn btn-primary" style="background: var(--primary-blue); color: var(--white); border: 2px solid var(--primary-blue);">View our Sponsors</a>
+                        <a href="sponsorship-packet.pdf" download class="btn-primary"><i class="fas fa-download"></i> Download PDF</a>
+                        <a href="sponsors.html" class="btn-outline">View our Sponsors</a>
                     </div>
                 </div>
                 <div class="pdf-sidebar">
                     <h3>Get Started</h3>
-                    <p><strong>For corporate or small busiuness inquiries (sponsorships, collaborations, questions), part donations, or other inquiries:</strong></p>
-                    <p>Contact <strong>Ethan Onyett or Ben Nguyen</strong> at <a href="mailto:spartanflightsjsu@gmail.com">spartanflightsjsu@gmail.com</a> and we will reach out as soon as possible.</p>
+                    <p><strong>For sponsorship inquiries, part donations, or questions:</strong></p>
+                    <p>Email <strong>Ethan Onyett or Ben Nguyen</strong> at <a href="mailto:spartanflightsjsu@gmail.com">spartanflightsjsu@gmail.com</a> and we'll get back to you within 48 hours.</p>
+                    <div style="margin-top: 2rem; text-align: center;">
+                        <a href="mailto:spartanflightsjsu@gmail.com" class="btn-primary" style="width: 100%; display: block;">Email Us</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -345,49 +136,78 @@
         <div id="individual" class="individual-donation-section" style="scroll-margin-top: 100px;">
             <div class="individual-donation-wrapper">
                 <h2>Individual Donations via Give Now</h2>
-                <p class="section-intro">Your support helps us push the boundaries of autonomous flight technology and compete at the highest levels. Every contribution, no matter the size, directly impacts our ability to innovate, learn, and represent SJSU on the global stage.</p>
+                <p class="section-intro">Any amount helps. All donations go through SJSU's Tower Foundation and are fully tax-deductible.</p>
                 
                 <div class="individual-donation-grid">
                     <div class="individual-donation-benefits">
-                        <h3>Why Support Spartan Flight?</h3>
+                        <h3>What Your Donation Funds</h3>
                         <ul>
-                            <li><strong>Fuel Innovation:</strong> Your donation directly supports cutting-edge research and development in autonomous aerial systems, helping students gain hands-on experience with real-world engineering challenges.</li>
-                            <li><strong>Support STEM Education:</strong> Help us provide valuable learning opportunities for the next generation of aerospace engineers, computer scientists, and innovators.</li>
-                            <li><strong>Make an Impact:</strong> Your contribution helps us compete against 70+ international teams, bringing recognition to SJSU and advancing the field of unmanned aerial systems.</li>
-                            <li><strong>Tax-Deductible:</strong> All donations through SJSU's Give Now platform are tax-deductible, making your support even more meaningful.</li>
+                            <li><strong>Parts & Materials:</strong> Carbon fiber, electronics, motors, batteries — everything needed to build a competition aircraft from scratch.</li>
+                            <li><strong>Travel to Competition:</strong> The SUAS Competition is in Maryland. Flights, lodging, and transport for 20+ students add up fast.</li>
+                            <li><strong>Tools & Equipment:</strong> Soldering stations, 3D printers, test equipment — the tools our students use to learn and build.</li>
+                            <li><strong>Tax-Deductible:</strong> All donations through SJSU's Give Now platform are tax-deductible. You'll get a receipt automatically.</li>
                         </ul>
                     </div>
                     <div class="individual-donation-content">
                         <h3>Donor Benefits</h3>
-                        <p style="color: var(--text-light); margin-bottom: 1.5rem;">As a thank you for your support, all individual donors receive:</p>
-                        <ul style="list-style: none; padding: 0; margin: 0;">
-                            <li style="color: var(--text-light); line-height: 1.8; margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
-                                <span style="position: absolute; left: 0; color: var(--accent-gold); font-weight: 900;">✓</span>
-                                <strong style="color: var(--primary-blue);">Personal Thank You:</strong> Receive a personalized thank you message from our team acknowledging your contribution.
-                            </li>
-                            <li style="color: var(--text-light); line-height: 1.8; margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
-                                <span style="position: absolute; left: 0; color: var(--accent-gold); font-weight: 900;">✓</span>
-                                <strong style="color: var(--primary-blue);">Website Recognition:</strong> Your name or logo (if desired) displayed on our sponsors page, showing your commitment to supporting innovation.
-                            </li>
-                            <li style="color: var(--text-light); line-height: 1.8; margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
-                                <span style="position: absolute; left: 0; color: var(--accent-gold); font-weight: 900;">✓</span>
-                                <strong style="color: var(--primary-blue);">Progress Newsletter:</strong> Exclusive access to our monthly progress newsletter with detailed updates on our projects, milestones, and competition preparation.
-                            </li>
-                        </ul>
-                        <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 2px solid var(--light-gray);">
-                            <h3 style="color: var(--primary-blue); margin-bottom: 1rem;">How to Donate</h3>
-                            <ol style="color: var(--text-light); line-height: 1.8; margin-left: 1.5rem; margin-bottom: 1.5rem; text-align: left;">
-                                <li>Click the button below to visit SJSU's Give Now donation page</li>
-                                <li>Find "Spartan Flight" on the list of organizations</li>
-                                <li>Select our organization and complete your donation</li>
-                            </ol>
-                            <div style="text-align: center; margin: 2rem 0;">
-                                <img src="images/sjsu_givenow.png" alt="SJSU Give Now instructions showing how to find Spartan Flight" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                        <p style="color: var(--text-light); margin-bottom: 1.5rem;">Every donor receives:</p>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon"><i class="fas fa-envelope-open-text"></i></div>
+                            <div class="benefit-text">
+                                <strong>Personal Thank You</strong>
+                                A personalized message from our team.
                             </div>
-                            <a href="https://give.sjsu.edu/campaigns/67453/donations/new" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="display: inline-block; background: var(--primary-blue); color: var(--white); margin-top: 1rem;">Donate via Give Now</a>
-                            <p style="text-align: center; margin-top: 1.5rem; color: var(--text-light); font-size: 0.9rem;">
-                                <strong>All donations are tax-deductible.</strong>
-                            </p>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon"><i class="fas fa-globe"></i></div>
+                            <div class="benefit-text">
+                                <strong>Website Recognition</strong>
+                                Your name on our sponsors page.
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon"><i class="fas fa-newspaper"></i></div>
+                            <div class="benefit-text">
+                                <strong>Monthly Build Updates</strong>
+                                Progress newsletter with photos and milestones.
+                            </div>
+                        </div>
+
+                        <div class="donation-steps">
+                            <h3 style="color: var(--primary-blue); margin-bottom: 1rem; font-size: 1.3rem;">How to Donate</h3>
+                            
+                            <div class="step-item">
+                                <div class="step-number">1</div>
+                                <div>Click the button below to visit SJSU's Give Now donation page</div>
+                            </div>
+                            
+                            <div class="step-item">
+                                <div class="step-number">2</div>
+                                <div>Find "Spartan Flight" on the list of organizations</div>
+                            </div>
+                            
+                            <div class="step-item">
+                                <div class="step-number">3</div>
+                                <div>Select our organization and complete your donation</div>
+                            </div>
+
+                            <div style="text-align: center; margin: 2rem 0;">
+                                <picture>
+                                    <source srcset="images/sjsu_givenow.avif" type="image/avif">
+        <source srcset="images/sjsu_givenow.webp" type="image/webp">
+                                    <img src="images/sjsu_givenow.png" alt="SJSU Give Now instructions showing how to find Spartan Flight" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                                </picture>
+                            </div>
+                            
+                            <div style="text-align: center;">
+                                <a href="https://give.sjsu.edu/campaigns/67453/donations/new" target="_blank" rel="noopener noreferrer" class="btn-primary" style="display: inline-block;">Donate via Give Now</a>
+                                <p style="margin-top: 1rem; color: var(--text-light); font-size: 0.9rem;">
+                                    <i class="fas fa-check-circle" style="color: var(--accent-gold); margin-right: 5px;"></i> <strong>All donations are tax-deductible.</strong>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -412,7 +232,8 @@
         window.addEventListener('resize', adjustPdfView);
     </script>
 
+    </main>
     <div id="footer-placeholder"></div>
-    <script src="load-header-footer.js"></script>
+    <script src="load-header-footer.min.js?v4"></script>
 </body>
 </html>

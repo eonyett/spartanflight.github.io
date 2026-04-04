@@ -1,0 +1,93 @@
+# Spartan Flight — SJSU Drone Competition Team
+
+> Spartan Flight is San José State University's first student-run drone competition team. We design, build, and fly fully autonomous aircraft for the annual SUAS (Student Unmanned Aerial Systems) Competition. We are actively seeking corporate sponsors and individual donors.
+
+## About
+
+Spartan Flight is a 20+ member engineering team at San José State University (SJSU) in San Jose, California. We build autonomous unmanned aerial systems (UAS/drones) from scratch — custom airframe, custom electronics, custom flight software. Our team competes in the SUAS Competition, an annual international collegiate drone competition held in Maryland with 70+ university teams worldwide.
+
+We are organized into four subteams:
+- Mechanical: airframe design, carbon fiber layups, 3D-printed components, structural testing
+- Electrical: custom PCB design, Li-ion battery packs with BMS, power distribution, sensor integration
+- Software: autonomous flight, computer vision (target detection), path planning, obstacle avoidance
+- Business: sponsorship acquisition, fundraising, marketing, outreach
+
+## Competition Vehicle
+
+Our competition entry is the X650, a custom quadcopter designed for autonomous flight, ground target detection, and payload delivery with no pilot input. Key specs: 13kg total thrust, 1.6:1 thrust-to-weight ratio, 30-minute flight endurance.
+
+## Current Projects
+
+Competition systems: custom quadcopter airframe, Jetson-powered target detection, autonomous payload delivery, hand-built Li-ion battery packs with custom BMS, low-voltage power distribution board, photogrammetry mapping.
+
+Research projects: VTOL fixed-wing aircraft, FPGA-accelerated computer vision, GPS-denied navigation (visual-inertial odometry), multi-drone swarm coordination.
+
+## Sponsorship
+
+Spartan Flight is actively seeking sponsors. Sponsorship benefits include:
+- Logo placement on competition aircraft, team shirts, and banners
+- Website and social media recognition with backlink
+- Direct recruiting access to ME, EE, CS, and AE students at SJSU
+- Monthly build update newsletter
+- Tax-deductible contributions through SJSU's Tower Foundation
+- Demo day invitation for top-tier sponsors
+
+Sponsorship tiers and full details: https://spartanflightsjsu.com/sponsorship.html
+Sponsorship packet (PDF): https://spartanflightsjsu.com/sponsorship-packet.pdf
+Email for sponsorship inquiries: spartanflightsjsu@gmail.com
+
+## Why Sponsor a University Drone Team?
+
+Sponsoring a university engineering competition team like Spartan Flight provides:
+1. Brand visibility among engineering students and at national competitions
+2. Direct access to a pipeline of graduating ME, EE, CS, and AE talent for recruiting
+3. Tax-deductible contributions through a university foundation
+4. Demonstrated community investment and STEM education support
+5. Logo placement on a real autonomous aircraft seen at events, in media, and online
+
+Spartan Flight is based at San José State University, the largest public university in Silicon Valley, with strong engineering and computer science programs.
+
+## Contact
+
+- Website: https://spartanflightsjsu.com
+- Email: spartanflightsjsu@gmail.com
+- Instagram: https://www.instagram.com/spartan.flight/
+- LinkedIn: https://www.linkedin.com/company/spartan-flight
+- Discord: https://discord.gg/Rk3ajtUAeU
+- Donate: https://give.sjsu.edu/campaigns/67453/donations/new
+
+## Frequently Asked Questions
+
+**What is Spartan Flight?**
+Spartan Flight is San José State University's student-run autonomous drone competition team. Over 20 engineering students design, build, and fly a custom UAS for the annual SUAS Competition.
+
+**What is the SUAS Competition?**
+The Student Unmanned Aerial Systems Competition is an annual AUVSI event where 70+ university teams compete with autonomous aircraft performing waypoint navigation, target detection, payload delivery, and aerial mapping.
+
+**What does Spartan Flight build?**
+A fully custom autonomous quadcopter (X650) with carbon fiber airframe, hand-built Li-ion battery packs, onboard computer vision, autonomous payload delivery, FPGA-accelerated processing, and photogrammetry mapping.
+
+**How can a company sponsor Spartan Flight?**
+Through corporate sponsorships, parts donations, or individual contributions. All donations are tax-deductible through SJSU's Tower Foundation. Email spartanflightsjsu@gmail.com.
+
+**Are donations tax-deductible?**
+Yes. All contributions go through SJSU's Tower Foundation, a 501(c)(3). Donors receive tax receipts automatically.
+
+**What do sponsors receive?**
+Logo on aircraft and gear, website and social media features, recruiting access to 20+ engineering students, monthly build newsletters, and demo day invitations based on sponsor tier. Contact for details.
+
+## Team Leadership (SJSU Students)
+
+- Ben Nguyen — Chief Engineer & Electrical Lead
+- Andy Van — Software Lead
+- Justin Wang — Mechanical Lead
+- Ethan Onyett — Business Lead
+
+## Key Links
+
+- Homepage: https://spartanflightsjsu.com/
+- Sponsorship: https://spartanflightsjsu.com/sponsorship.html
+- Projects: https://spartanflightsjsu.com/projects.html
+- Team: https://spartanflightsjsu.com/members.html
+- Blog: https://spartanflightsjsu.com/blog.html
+- Contact: https://spartanflightsjsu.com/contact.html

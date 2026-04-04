@@ -919,7 +919,7 @@ footer a:hover {
 /* Sponsor section sub text */
 .sponsor-sub {
     font-size: 1.05rem;
-    opacity: 0.95;
+    opacity: 1;
     margin-bottom: 1rem;
 }
 
@@ -1747,11 +1747,12 @@ nav a.nav-sponsor-btn:hover {
 
 /* Hero Section */
 
-/* Section Indicator (scroll spy nav — mobile/tablet only, top-right) */
+/* Section Indicator (scroll spy nav — mobile/tablet only, right-center) */
 .section-indicator {
     position: fixed;
-    top: 64px;
-    right: 0.75rem;
+    top: 50%;
+    right: 0.5rem;
+    transform: translateY(-50%);
     z-index: 90;
     display: none;
     flex-direction: column;
@@ -1862,7 +1863,6 @@ nav a.nav-sponsor-btn:hover {
 .hero p {
     font-size: 1.1rem;
     margin-bottom: 2.5rem;
-    opacity: 0.95;
     line-height: 1.8;
 }
 
@@ -1918,8 +1918,8 @@ nav a.nav-sponsor-btn:hover {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 36px;
-    height: 36px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.15);
     color: var(--white);
@@ -2057,12 +2057,15 @@ h2 {
     background: rgba(255, 255, 255, 0.6);
     cursor: pointer;
     transition: all 0.3s;
+    padding: 10px;
+    background-clip: content-box;
 }
 
 .image-dot.active {
     background: var(--accent-gold);
     width: 24px;
     border-radius: 5px;
+    background-clip: content-box;
 }
 
 /* Stats */
@@ -2380,7 +2383,7 @@ h2 {
 
 .sponsor-benefit-desc {
     font-size: 0.9rem;
-    opacity: 0.9;
+    opacity: 1;
     line-height: 1.5;
 }
 
@@ -2663,7 +2666,7 @@ footer a:hover {
     }
 
     .section-indicator {
-        top: 56px;
+        right: 0.35rem;
     }
 
     section {
@@ -2752,8 +2755,8 @@ footer a:hover {
     }
 
     .hero-social-link {
-        width: 32px;
-        height: 32px;
+        width: 44px;
+        height: 44px;
     }
 
     .hero-social-link svg {

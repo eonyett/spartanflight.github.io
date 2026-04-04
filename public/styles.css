@@ -1831,10 +1831,37 @@ nav a.nav-sponsor-btn:hover {
     position: relative;
     height: 600px;
     overflow: hidden;
-    background: linear-gradient(135deg, var(--primary-blue) 0%, #004d7a 100%);
+    background: var(--primary-blue);
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.hero-bg-slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+    will-change: opacity;
+}
+
+.hero-bg-slide.active {
+    opacity: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 30, 60, 0.7);
+    z-index: 1;
 }
 
 .hero-content {
@@ -1842,6 +1869,8 @@ nav a.nav-sponsor-btn:hover {
     text-align: center;
     max-width: 900px;
     padding: 2rem;
+    position: relative;
+    z-index: 2;
 }
 
 .hero h1 {

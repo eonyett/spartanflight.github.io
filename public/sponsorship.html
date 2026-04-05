@@ -3,15 +3,15 @@
 <head>
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-F1SCGSS72R"></script>
-    <script src="analytics.min.js?v2"></script>
+    <script defer src="analytics.min.js?v2"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sponsor Spartan Flight — SJSU's autonomous drone competition team. Corporate sponsorships, parts donations, and tax-deductible individual contributions. Logo on aircraft, recruiting access to 20+ engineering students, monthly updates.">
+    <meta name="description" content="Sponsor Spartan Flight and recruit from Silicon Valley's top engineering talent. SJSU's 2026 SUAS drone team offers corporate and tax-deductible sponsorships. Get your logo on our autonomous aircraft and gain exclusive access to top-tier aerospace, software, and mechanical students.">
     <meta name="keywords" content="sponsor university drone team, corporate sponsorship engineering club, SJSU sponsorship, student UAS team sponsor, tax-deductible STEM donation, sponsor college robotics team, university club sponsorship opportunities">
     <title>Sponsor Us - Spartan Flight | SJSU Drone Team Sponsorship</title>
     <link rel="icon" type="image/png" href="images/favicon.png">
-    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
@@ -19,18 +19,22 @@
     <link rel="canonical" href="https://spartanflightsjsu.com/sponsorship.html">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Sponsor Us - Spartan Flight | SJSU Drone Team">
-    <meta property="og:description" content="Sponsor Spartan Flight — SJSU's autonomous drone competition team. Tax-deductible corporate sponsorships with recruiting access, brand visibility, and monthly updates.">
+    <meta property="og:description" content="Sponsor Spartan Flight and recruit from Silicon Valley's top engineering talent. SJSU's 2026 SUAS drone team offers corporate and tax-deductible sponsorships. Get your logo on our autonomous aircraft and gain exclusive access to top-tier aerospace, software, and mechanical students.">
     <meta property="og:url" content="https://spartanflightsjsu.com/sponsorship.html">
     <meta property="og:image" content="https://spartanflightsjsu.com/images/sponsors-collage.png">
     <meta property="og:site_name" content="Spartan Flight">
     <meta property="og:locale" content="en_US">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Sponsor Us - Spartan Flight | SJSU Drone Team">
-    <meta name="twitter:description" content="Sponsor Spartan Flight — SJSU's autonomous drone competition team. Tax-deductible corporate sponsorships with recruiting access, brand visibility, and monthly updates.">
+    <meta name="twitter:description" content="Sponsor Spartan Flight and recruit from Silicon Valley's top engineering talent. SJSU's 2026 SUAS drone team offers corporate and tax-deductible sponsorships. Get your logo on our autonomous aircraft and gain exclusive access to top-tier aerospace, software, and mechanical students.">
     <meta name="twitter:image" content="https://spartanflightsjsu.com/images/sponsors-collage.png">
     <meta name="twitter:site" content="@spartan.flight">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="author" content="Spartan Flight - San Jose State University">
+    <meta name="geo.region" content="US-CA">
+    <meta name="geo.placename" content="San Jose, California">
+    <meta name="geo.position" content="37.3352;-121.8811">
+    <meta name="ICBM" content="37.3352, -121.8811">
     <link rel="stylesheet" href="styles.min.css?v4">
     <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-readable site information">
     <!-- JSON-LD Structured Data -->
@@ -39,7 +43,7 @@
       "@context": "https://schema.org",
       "@type": "WebPage",
       "name": "Sponsor Spartan Flight - SJSU Drone Team",
-      "description": "Sponsorship opportunities for Spartan Flight, SJSU's autonomous drone competition team. Corporate sponsorships, parts donations, and individual contributions — all tax-deductible.",
+      "description": "Sponsor Spartan Flight and recruit from Silicon Valley's top engineering talent. SJSU's 2026 SUAS drone team offers corporate and tax-deductible sponsorships. Get your logo on our autonomous aircraft and gain exclusive access to top-tier aerospace, software, and mechanical students.",
       "url": "https://spartanflightsjsu.com/sponsorship.html",
       "isPartOf": {
         "@type": "WebSite",
@@ -58,6 +62,9 @@
       ]
     }
     </script>
+    <!-- Preload Logo -->
+    <link rel="preload" as="image" href="/images/logo.avif" type="image/avif">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -198,7 +205,7 @@
                                 <picture>
                                     <source srcset="images/sjsu_givenow.avif" type="image/avif">
         <source srcset="images/sjsu_givenow.webp" type="image/webp">
-                                    <img src="images/sjsu_givenow.png" alt="SJSU Give Now instructions showing how to find Spartan Flight" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                                    <img src="images/sjsu_givenow.png" loading="lazy" alt="SJSU Give Now instructions showing how to find Spartan Flight" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
                                 </picture>
                             </div>
                             
@@ -234,6 +241,6 @@
 
     </main>
     <div id="footer-placeholder"></div>
-    <script src="load-header-footer.min.js?v4"></script>
+    <script defer src="load-header-footer.min.js?v4"></script>
 </body>
 </html>

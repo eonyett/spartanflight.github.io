@@ -3,7 +3,7 @@
 <head>
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-F1SCGSS72R"></script>
-    <script src="../analytics.min.js?v2"></script>
+    <script defer src="../analytics.min.js?v2"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Custom Quadcopter Airframe - Spartan Flight</title>
@@ -24,8 +24,15 @@
     <meta name="twitter:site" content="@spartan.flight">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="author" content="Spartan Flight - San Jose State University">
+    <meta name="geo.region" content="US-CA">
+    <meta name="geo.placename" content="San Jose, California">
+    <meta name="geo.position" content="37.3352;-121.8811">
+    <meta name="ICBM" content="37.3352, -121.8811">
     <link rel="icon" type="image/png" href="../images/favicon.png">
     <link rel="stylesheet" href="../styles.min.css?v4">
+    <!-- Preload Logo -->
+    <link rel="preload" as="image" href="/images/logo.avif" type="image/avif">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -115,6 +122,6 @@
 
     </main>
     <div id="footer-placeholder"></div>
-    <script src="../load-header-footer.min.js?v4"></script>
+    <script defer src="../load-header-footer.min.js?v4"></script>
 </body>
 </html>

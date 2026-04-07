@@ -3231,3 +3231,16 @@ footer a:hover {
         font-size: 0.9rem;
     }
 }
+
+
+/* Fix header placeholder CLS layout shift */
+#header-placeholder {
+    min-height: 98px;
+    background: var(--white);
+}
+
+@media (max-width: 768px) {
+    #header-placeholder {
+        min-height: 77px;
+    }
+}

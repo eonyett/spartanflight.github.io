@@ -8,6 +8,7 @@
     --primary-blue: #003366;
     --primary-dark: #002244;
     --accent-gold: #E5A823;
+    --accent-gold-dark: #AC7000;
     --accent-gold-hover: #c6901d;
     --light-gray: #f5f5f5;
     --white: #ffffff;
@@ -69,7 +70,7 @@ header {
 }
 
 .logo-accent {
-    color: var(--accent-gold);
+    color: var(--accent-gold-dark);
 }
 
 .logo-subtitle {
@@ -91,7 +92,7 @@ nav a {
 }
 
 nav a:hover {
-    color: var(--accent-gold);
+    color: var(--accent-gold-dark);
 }
 
 nav a.nav-sponsor-btn {
@@ -106,7 +107,7 @@ nav a.nav-sponsor-btn {
 
 nav a.nav-sponsor-btn:hover {
     background: var(--primary-blue);
-    color: var(--accent-gold);
+    color: var(--accent-gold-dark);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 51, 102, 0.3);
 }
@@ -173,7 +174,7 @@ nav a.nav-sponsor-btn:hover {
 .mobile-menu a:hover,
 .mobile-menu a:active {
     background: var(--light-gray);
-    color: var(--accent-gold);
+    color: var(--accent-gold-dark);
 }
 
 .mobile-menu a.nav-sponsor-btn {
@@ -190,7 +191,7 @@ nav a.nav-sponsor-btn:hover {
 .mobile-menu a.nav-sponsor-btn:hover,
 .mobile-menu a.nav-sponsor-btn:active {
     background: var(--primary-blue);
-    color: var(--accent-gold);
+    color: var(--accent-gold-dark);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 51, 102, 0.3);
 }
@@ -273,7 +274,7 @@ nav a.nav-sponsor-btn:hover {
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--accent-gold);
+    border-color: var(--accent-gold-dark);
     box-shadow: 0 0 0 3px rgba(255, 184, 28, 0.2);
 }
 
@@ -316,7 +317,7 @@ nav a.nav-sponsor-btn:hover {
 }
 
 .captcha-display button:hover {
-    color: var(--accent-gold);
+    color: var(--accent-gold-dark);
 }
 
 .contact-submit {
@@ -370,7 +371,7 @@ nav a.nav-sponsor-btn:hover {
 }
 
 .contact-info-item a:hover {
-    color: var(--accent-gold);
+    color: var(--accent-gold-dark);
 }
 
 .contact-info-list {
@@ -392,7 +393,7 @@ nav a.nav-sponsor-btn:hover {
 .contact-info-list svg {
     width: 18px;
     height: 18px;
-    color: var(--accent-gold);
+    color: var(--accent-gold-dark);
     flex-shrink: 0;
 }
 
@@ -569,7 +570,7 @@ h2 {
 }
 
 .section-link:hover {
-    color: var(--accent-gold);
+    color: var(--accent-gold-dark);
     gap: 0.8rem;
 }
 
@@ -614,7 +615,7 @@ h2 {
     text-align: right;
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--accent-gold);
+    color: var(--accent-gold-dark);
     padding: 1rem;
 }
 
@@ -676,7 +677,7 @@ h2 {
 
 .blog-meta {
     font-size: 0.85rem;
-    color: var(--accent-gold);
+    color: var(--accent-gold-dark);
     font-style: italic;
     margin-top: 1.5rem;
     font-weight: 600;
@@ -892,7 +893,7 @@ footer a:hover {
 
 /* Blog date label */
 .blog-date {
-    color: var(--accent-gold);
+    color: var(--accent-gold-dark);
     font-size: 0.85rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
@@ -911,7 +912,7 @@ footer a:hover {
 /* Blog tag */
 .blog-tag {
     font-size: 0.85rem;
-    color: var(--accent-gold);
+    color: var(--accent-gold-dark);
     font-style: italic;
     font-weight: 600;
 }
@@ -954,7 +955,7 @@ footer a:hover {
 }
 
 .donation-note a {
-    color: var(--accent-gold);
+    color: var(--accent-gold-dark);
     text-decoration: underline;
     font-weight: 600;
 }
@@ -1322,8 +1323,8 @@ h2::after {
 }
 
 .pdf-sidebar a:hover {
-    color: var(--accent-gold);
-    border-bottom-color: var(--accent-gold);
+    color: var(--accent-gold-dark);
+    border-bottom-color: var(--accent-gold-dark);
 }
 
 .pdf-download-btn {
@@ -1388,7 +1389,7 @@ h2::after {
 }
 
 .individual-donation-benefits h3 {
-    color: var(--accent-gold);
+    color: var(--accent-gold-dark);
     font-size: 1.8rem;
     margin-bottom: 2rem;
     font-weight: 700;
@@ -1416,7 +1417,7 @@ h2::after {
     position: absolute;
     left: 0;
     top: 2px;
-    color: var(--accent-gold);
+    color: var(--accent-gold-dark);
     font-size: 1.2rem;
 }
 
@@ -1562,6 +1563,7 @@ h2::after {
 :root {
     --primary-blue: #003366;
     --accent-gold: #E5A823;
+    --accent-gold-dark: #AC7000;
     --accent-gold-hover: #c6901d;
     --light-gray: #f5f5f5;
     --white: #ffffff;
@@ -1618,7 +1620,7 @@ header {
 }
 
 .logo-accent {
-    color: var(--accent-gold);
+    color: var(--accent-gold-dark);
 }
 
 .logo-subtitle {
@@ -1640,7 +1642,7 @@ nav a {
 }
 
 nav a:hover {
-    color: var(--accent-gold);
+    color: var(--accent-gold-dark);
 }
 
 nav a.nav-sponsor-btn {
@@ -1655,7 +1657,7 @@ nav a.nav-sponsor-btn {
 
 nav a.nav-sponsor-btn:hover {
     background: var(--primary-blue);
-    color: var(--accent-gold);
+    color: var(--accent-gold-dark);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 51, 102, 0.3);
 }
@@ -1722,7 +1724,7 @@ nav a.nav-sponsor-btn:hover {
 .mobile-menu a:hover,
 .mobile-menu a:active {
     background: var(--light-gray);
-    color: var(--accent-gold);
+    color: var(--accent-gold-dark);
 }
 
 .mobile-menu a.nav-sponsor-btn {
@@ -1739,7 +1741,7 @@ nav a.nav-sponsor-btn:hover {
 .mobile-menu a.nav-sponsor-btn:hover,
 .mobile-menu a.nav-sponsor-btn:active {
     background: var(--primary-blue);
-    color: var(--accent-gold);
+    color: var(--accent-gold-dark);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 51, 102, 0.3);
 }
@@ -1794,7 +1796,7 @@ nav a.nav-sponsor-btn:hover {
 }
 
 .section-indicator-link:hover {
-    color: var(--accent-gold);
+    color: var(--accent-gold-dark);
 }
 
 /* Show section indicator on mobile/tablet only */
@@ -2115,7 +2117,7 @@ h2 {
 
 .stat-number {
     font-size: 2.5rem;
-    color: var(--accent-gold);
+    color: var(--accent-gold-dark);
     font-weight: 900;
     margin-bottom: 0.5rem;
 }
@@ -2184,7 +2186,7 @@ h2 {
 
 .card-leader-info p {
     font-size: 0.75rem;
-    color: var(--accent-gold);
+    color: var(--accent-gold-dark);
     margin-bottom: 0.25rem;
     font-weight: 700;
     line-height: 1.2;
@@ -2206,7 +2208,7 @@ h2 {
 }
 
 .card-leader-links a:hover {
-    color: var(--accent-gold);
+    color: var(--accent-gold-dark);
 }
 
 .card:hover {
@@ -2289,7 +2291,7 @@ h2 {
     content: '✓';
     position: absolute;
     left: 0;
-    color: var(--accent-gold);
+    color: var(--accent-gold-dark);
     font-weight: bold;
     font-size: 1.2rem;
     transition: transform 0.2s ease;
@@ -2312,7 +2314,7 @@ h2 {
 }
 
 .learn-more-link:hover {
-    color: var(--accent-gold);
+    color: var(--accent-gold-dark);
     gap: 0.8rem;
 }
 
@@ -2357,7 +2359,7 @@ h2 {
 }
 
 .section-link:hover {
-    color: var(--accent-gold);
+    color: var(--accent-gold-dark);
     gap: 0.8rem;
 }
 
@@ -2515,7 +2517,7 @@ h2 {
     position: absolute;
     left: 1rem;
     top: 1.25rem;
-    color: var(--accent-gold);
+    color: var(--accent-gold-dark);
     font-weight: 900;
     font-size: 1.1rem;
 }
@@ -2544,7 +2546,7 @@ h2 {
 .sponsor-kpis .kpi { text-align: center; }
 
 .kpi-number {
-    color: var(--accent-gold);
+    color: var(--accent-gold-dark);
     font-weight: 900;
     font-size: 1.8rem;
     margin-bottom: 0.15rem;
@@ -3187,7 +3189,7 @@ footer a:hover {
 }
 
 .member-role {
-    color: var(--accent-gold);
+    color: var(--accent-gold-dark);
     font-weight: 700;
     margin-bottom: 1rem;
     font-size: 0.95rem;
@@ -3204,7 +3206,7 @@ footer a:hover {
 }
 
 .member-link:hover {
-    color: var(--accent-gold);
+    color: var(--accent-gold-dark);
 }
 
 @media (max-width: 768px) {

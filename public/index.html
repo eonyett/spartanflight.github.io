@@ -36,7 +36,7 @@
     <link rel="stylesheet" href="styles.min.css?v5">
     <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-readable site information">
     <!-- Preload Hero Image -->
-    <link rel="preload" as="image" href="images/team-1.jpg" type="image.jpg" fetchpriority="high">
+    <link rel="preload" as="image" href="images/team-1.jpg" type="image/jpeg" fetchpriority="high">
 
     <!-- Preload Logo -->
     <link rel="preload" as="image" href="/images/logo.jpg" fetchpriority="high">
@@ -827,8 +827,16 @@
             
             // Calculate once on load and on resize
             calculatePositions();
+            let lastWidth = window.innerWidth;
+            let resizeTimeout;
             window.addEventListener('resize', () => {
-                requestAnimationFrame(calculatePositions);
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(() => {
+                    if (window.innerWidth !== lastWidth) {
+                        lastWidth = window.innerWidth;
+                        requestAnimationFrame(calculatePositions);
+                    }
+                }, 150);
             });
 
             function updateIndicator() {

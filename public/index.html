@@ -36,7 +36,7 @@
     <link rel="stylesheet" href="styles.min.css?v5">
     <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-readable site information">
     <!-- Preload Hero Image -->
-    <link rel="preload" as="image" href="images/team-1.avif" type="image/avif" fetchpriority="high">
+    <link rel="preload" as="image" href="images/team-1.jpg" type="image.jpg" fetchpriority="high">
 
     <!-- Preload Logo -->
     <link rel="preload" as="image" href="/images/logo.jpg" fetchpriority="high">
@@ -246,12 +246,12 @@
 
     <section class="hero">
         <div class="hero-bg" aria-hidden="true">
-            <div class="hero-bg-slide active" style="background-image: url('images/team-1.avif');"></div>
-            <div class="hero-bg-slide" style="background-image: url('images/team-2.avif');"></div>
-            <div class="hero-bg-slide" style="background-image: url('images/team-3.avif');"></div>
-            <div class="hero-bg-slide" style="background-image: url('images/team-4.avif');"></div>
-            <div class="hero-bg-slide" style="background-image: url('images/team-5.avif');"></div>
-            <div class="hero-bg-slide" style="background-image: url('images/team-6.avif');"></div>
+            <div class="hero-bg-slide active" style="background-image: url('images/team-1.jpg');"></div>
+            <div class="hero-bg-slide" style="background-image: url('images/team-2.jpg');"></div>
+            <div class="hero-bg-slide" style="background-image: url('images/team-3.jpg');"></div>
+            <div class="hero-bg-slide" style="background-image: url('images/team-4.jpg');"></div>
+            <div class="hero-bg-slide" style="background-image: url('images/team-5.jpg');"></div>
+            <div class="hero-bg-slide" style="background-image: url('images/team-6.jpg');"></div>
         </div>
         <div class="hero-overlay" aria-hidden="true"></div>
         <div class="hero-content">
@@ -298,11 +298,11 @@
                     <p>Founded in 2025 at SJSU, the largest public university in Silicon Valley, Spartan Flight has already completed flight testing, built a working competition vehicle, and registered for SUAS 2026.</p>
                 </div>
                 <div class="image-carousel" role="region" aria-label="Team photos carousel">
-                    <div class="carousel-image active" style="background-image: url('images/team-1.avif');" aria-hidden="false"></div>
-                    <div class="carousel-image" style="background-image: url('images/team-2.avif');" aria-hidden="true"></div>
-                    <div class="carousel-image" style="background-image: url('images/team-3.avif');" aria-hidden="true"></div>
-                    <div class="carousel-image" style="background-image: url('images/team-4.avif');" aria-hidden="true"></div>
-                    <div class="carousel-image" style="background-image: url('images/team-5.avif');" aria-hidden="true"></div>
+                    <div class="carousel-image active" style="background-image: url('images/team-1.jpg');" aria-hidden="false"></div>
+                    <div class="carousel-image" style="background-image: url('images/team-2.jpg');" aria-hidden="true"></div>
+                    <div class="carousel-image" style="background-image: url('images/team-3.jpg');" aria-hidden="true"></div>
+                    <div class="carousel-image" style="background-image: url('images/team-4.jpg');" aria-hidden="true"></div>
+                    <div class="carousel-image" style="background-image: url('images/team-5.jpg');" aria-hidden="true"></div>
                     <div class="image-carousel-controls" role="group" aria-label="Carousel navigation">
                         <div class="image-dot active" data-slide="0" role="button" aria-label="Go to slide 1 (current)" tabindex="0"></div>
                         <div class="image-dot" data-slide="1" role="button" aria-label="Go to slide 2" tabindex="0"></div>
@@ -404,9 +404,9 @@
         <div class="section-container">
             <div class="about-content">
                 <div class="image-carousel" role="region" aria-label="Vehicle photos carousel">
-                    <div class="carousel-image active" style="background-image: url('images/vehicle-1.avif');" aria-hidden="false"></div>
-                    <div class="carousel-image" style="background-image: url('images/vehicle-2.avif');" aria-hidden="true"></div>
-                    <div class="carousel-image" style="background-image: url('images/vehicle-3.avif');" aria-hidden="true"></div>
+                    <div class="carousel-image active" style="background-image: url('images/vehicle-1.jpg');" aria-hidden="false"></div>
+                    <div class="carousel-image" style="background-image: url('images/vehicle-2.jpg');" aria-hidden="true"></div>
+                    <div class="carousel-image" style="background-image: url('images/vehicle-3.jpg');" aria-hidden="true"></div>
                     <div class="image-carousel-controls" role="group" aria-label="Carousel navigation">
                         <div class="image-dot active" data-vslide="0" role="button" aria-label="Go to slide 1 (current)" tabindex="0"></div>
                         <div class="image-dot" data-vslide="1" role="button" aria-label="Go to slide 2" tabindex="0"></div>
@@ -813,20 +813,30 @@
             const sectionIds = Array.from(links).map(l => l.dataset.section);
             let ticking = false;
 
-            function updateIndicator() {
-                const scrollY = window.scrollY + 160;
-                
-                // --- DOM READS ---
-                // Pre-calculate positions to avoid forced reflows during DOM writes
-                const sectionPositions = sectionIds.map(id => {
+            let sectionPositions = [];
+            let heroBottom = 0;
+            
+            function calculatePositions() {
+                sectionPositions = sectionIds.map(id => {
                     const el = document.getElementById(id);
                     return { id, top: el ? el.offsetTop : 0 };
                 });
-                
                 const hero = document.querySelector('.hero');
-                const heroBottom = hero ? hero.offsetTop + hero.offsetHeight : 0;
+                heroBottom = hero ? hero.offsetTop + hero.offsetHeight : 0;
+            }
+            
+            // Calculate once on load and on resize
+            calculatePositions();
+            window.addEventListener('resize', () => {
+                requestAnimationFrame(calculatePositions);
+            });
+
+            function updateIndicator() {
+                const scrollY = window.scrollY + 160;
                 
                 // --- DOM WRITES ---
+                if (sectionPositions.length === 0) return;
+                
                 let current = sectionPositions[0].id;
                 for (const pos of sectionPositions) {
                     if (pos.top > 0 && pos.top <= scrollY) {

@@ -39,7 +39,7 @@
     <link rel="preload" as="image" href="images/team-1.avif" type="image/avif" fetchpriority="high">
 
     <!-- Preload Logo -->
-    <link rel="preload" as="image" href="/images/logo.avif" type="image/avif">
+    <link rel="preload" as="image" href="/images/logo.jpg" fetchpriority="high">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -281,21 +281,9 @@
     <div class="sponsor-strip">
         <p>Supported By</p>
         <div class="logos-grid">
-            <picture>
-                <source srcset="images/sponsors-collage.avif" type="image/avif">
-                <source srcset="images/sponsors-collage.webp" type="image/webp">
                 <img src="images/sponsors-collage-small.png" alt="Sponsors collage" width="120" height="30" loading="lazy">
-            </picture>
-            <picture>
-                <source srcset="images/sponsor_astral.avif" type="image/avif">
-                <source srcset="images/sponsor_astral.webp" type="image/webp">
                 <img src="images/sponsor_astral-small.png" alt="Astral" width="120" height="30" loading="lazy">
-            </picture>
-            <picture>
-                <source srcset="images/sponsor_stencilease.avif" type="image/avif">
-                <source srcset="images/sponsor_stencilease.webp" type="image/webp">
                 <img src="images/sponsor_stencilease.jpg" alt="Stencilease" width="120" height="30" loading="lazy">
-            </picture>
             <img src="images/sponsor-alif-small.png" alt="Alif" width="120" height="30" loading="lazy">
         </div>
     </div>
@@ -340,11 +328,7 @@
                     </div>
                     <div class="card-leader">
                         <div class="card-leader-img">
-                            <picture>
-                                <source srcset="images/members/justin.avif" type="image/avif">
-                                <source srcset="images/members/justin.webp" type="image/webp">
                                 <img src="images/members/justin.jpg" alt="Justin Wang" width="50" height="50" loading="lazy">
-                            </picture>
                         </div>
                         <div class="card-leader-info">
                             <h4>Justin Wang</h4>
@@ -362,11 +346,7 @@
                     </div>
                     <div class="card-leader">
                         <div class="card-leader-img">
-                            <picture>
-                                <source srcset="images/members/ben.avif" type="image/avif">
-                                <source srcset="images/members/ben.webp" type="image/webp">
                                 <img src="images/members/ben.jpg" alt="Ben Nguyen" width="50" height="50" loading="lazy">
-                            </picture>
                         </div>
                         <div class="card-leader-info">
                             <h4>Ben Nguyen</h4>
@@ -384,11 +364,7 @@
                     </div>
                     <div class="card-leader">
                         <div class="card-leader-img">
-                            <picture>
-                                <source srcset="images/members/andy.avif" type="image/avif">
-                                <source srcset="images/members/andy.webp" type="image/webp">
                                 <img src="images/members/andy.jpg" alt="Andy Van" width="50" height="50" loading="lazy">
-                            </picture>
                         </div>
                         <div class="card-leader-info">
                             <h4>Andy Van</h4>
@@ -406,11 +382,7 @@
                     </div>
                     <div class="card-leader">
                         <div class="card-leader-img">
-                            <picture>
-                                <source srcset="images/members/ethan.avif" type="image/avif">
-                                <source srcset="images/members/ethan.webp" type="image/webp">
                                 <img src="images/members/ethan.jpg" alt="Ethan Onyett" width="50" height="50" loading="lazy">
-                            </picture>
                         </div>
                         <div class="card-leader-info">
                             <h4>Ethan Onyett</h4>
@@ -559,21 +531,9 @@
             <div class="sponsor-logos">
                 <h3>Companies That Back Us</h3>
                 <div class="logos-grid">
-                    <div><picture>
-                        <source srcset="images/sponsors-collage.avif" type="image/avif">
-                        <source srcset="images/sponsors-collage.webp" type="image/webp">
                         <img src="images/sponsors-collage-small.png" alt="Sponsors collage" loading="lazy" width="180" height="60">
-                    </picture></div>
-                    <div><picture>
-                        <source srcset="images/sponsor_astral.avif" type="image/avif">
-                        <source srcset="images/sponsor_astral.webp" type="image/webp">
                         <img src="images/sponsor_astral-small.png" alt="Astral" loading="lazy" width="180" height="60">
-                    </picture></div>
-                    <div><picture>
-                        <source srcset="images/sponsor_stencilease.avif" type="image/avif">
-                        <source srcset="images/sponsor_stencilease.webp" type="image/webp">
                         <img src="images/sponsor_stencilease.jpg" alt="Stencilease" loading="lazy" width="180" height="60">
-                    </picture></div>
                     <div><img src="images/sponsor-alif-small.png" alt="Alif" loading="lazy" width="180" height="60"></div>
                 </div>
             </div>
@@ -855,22 +815,30 @@
 
             function updateIndicator() {
                 const scrollY = window.scrollY + 160;
-                let current = sectionIds[0];
-
-                for (const id of sectionIds) {
+                
+                // --- DOM READS ---
+                // Pre-calculate positions to avoid forced reflows during DOM writes
+                const sectionPositions = sectionIds.map(id => {
                     const el = document.getElementById(id);
-                    if (el && el.offsetTop <= scrollY) {
-                        current = id;
+                    return { id, top: el ? el.offsetTop : 0 };
+                });
+                
+                const hero = document.querySelector('.hero');
+                const heroBottom = hero ? hero.offsetTop + hero.offsetHeight : 0;
+                
+                // --- DOM WRITES ---
+                let current = sectionPositions[0].id;
+                for (const pos of sectionPositions) {
+                    if (pos.top > 0 && pos.top <= scrollY) {
+                        current = pos.id;
                     }
                 }
 
-                links.forEach(link => {
-                    link.classList.toggle('active', link.dataset.section === current);
+                links.forEach((link, i) => {
+                    link.classList.toggle('active', sectionIds[i] === current);
                 });
 
                 // Show/hide indicator based on scroll position
-                const hero = document.querySelector('.hero');
-                const heroBottom = hero ? hero.offsetTop + hero.offsetHeight : 0;
                 indicator.classList.toggle('visible', window.scrollY > heroBottom - 100);
                 ticking = false;
             }

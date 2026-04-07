@@ -811,64 +811,40 @@
             const indicator = document.getElementById('sectionIndicator');
             const links = indicator.querySelectorAll('.section-indicator-link');
             const sectionIds = Array.from(links).map(l => l.dataset.section);
-            let ticking = false;
-
-            let sectionPositions = [];
-            let heroBottom = 0;
             
-            function calculatePositions() {
-                sectionPositions = sectionIds.map(id => {
-                    const el = document.getElementById(id);
-                    return { id, top: el ? el.offsetTop : 0 };
-                });
-                const hero = document.querySelector('.hero');
-                heroBottom = hero ? hero.offsetTop + hero.offsetHeight : 0;
-            }
-            
-            // Calculate once on load and on resize
-            calculatePositions();
-            let lastWidth = window.innerWidth;
-            let resizeTimeout;
-            window.addEventListener('resize', () => {
-                clearTimeout(resizeTimeout);
-                resizeTimeout = setTimeout(() => {
-                    if (window.innerWidth !== lastWidth) {
-                        lastWidth = window.innerWidth;
-                        requestAnimationFrame(calculatePositions);
+            let currentActive = null;
+            const sectionObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const newActive = entry.target.id;
+                        if (newActive !== currentActive) {
+                            currentActive = newActive;
+                            links.forEach((link, i) => {
+                                link.classList.toggle('active', sectionIds[i] === currentActive);
+                            });
+                        }
                     }
-                }, 150);
+                });
+            }, { rootMargin: '-160px 0px -40% 0px', threshold: 0 });
+
+            sectionIds.forEach(id => {
+                const el = document.getElementById(id);
+                if (el) sectionObserver.observe(el);
             });
 
-            function updateIndicator() {
-                const scrollY = window.scrollY + 160;
-                
-                // --- DOM WRITES ---
-                if (sectionPositions.length === 0) return;
-                
-                let current = sectionPositions[0].id;
-                for (const pos of sectionPositions) {
-                    if (pos.top > 0 && pos.top <= scrollY) {
-                        current = pos.id;
+            const hero = document.querySelector('.hero');
+            let isIndicatorVisible = false;
+            const heroObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    const shouldBeVisible = !entry.isIntersecting;
+                    if (shouldBeVisible !== isIndicatorVisible) {
+                        isIndicatorVisible = shouldBeVisible;
+                        indicator.classList.toggle('visible', isIndicatorVisible);
                     }
-                }
-
-                links.forEach((link, i) => {
-                    link.classList.toggle('active', sectionIds[i] === current);
                 });
+            }, { rootMargin: '-10% 0px 0px 0px', threshold: 0 });
 
-                // Show/hide indicator based on scroll position
-                indicator.classList.toggle('visible', window.scrollY > heroBottom - 100);
-                ticking = false;
-            }
-
-            window.addEventListener('scroll', function() {
-                if (!ticking) {
-                    requestAnimationFrame(updateIndicator);
-                    ticking = true;
-                }
-            });
-
-            updateIndicator();
+            if (hero) heroObserver.observe(hero);
         })();
 
         // Hero background rotation
